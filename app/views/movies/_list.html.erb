@@ -1,5 +1,6 @@
-<div>
-  <p class="h3">
+<div data-controller="movie-card" data-search-movies-target="list">
+  <i class="fa-solid fa-square-caret-down fs-1 mb-3" data-action="click->movie-card#revealContent"></i>
+  <p class="h3 d-none" data-movie-card-target="content">
     <% if params[:query].blank? %>
       <%= pluralize movies.count, "movie" %> available
     <% else %>
